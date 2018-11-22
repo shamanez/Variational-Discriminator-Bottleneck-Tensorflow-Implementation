@@ -39,13 +39,13 @@ def main(epoch,batch_size,lr,z_dim,bottle_dim,i_c,alpha,n_critic,gpu_id,data_poo
         fake = generator(z, reuse=False)
 
         # Obtaining scores , means and stds for real and fake data from the discriminator
-        r_logit,r_mus,r_sigmas = discriminator(real, reuse=False,gen_train=False,bottleneck_dim=bottle_dim)
-        f_logit,f_mus,f_sigmas = discriminator(fake,gen_train=False,bottleneck_dim=bottle_dim)
+        r_logit,r_mus,r_sigmas = discriminator(real, reuse=False,gen_train=False,bottleneck_dim=bottle_dim,batch_size=batch_size)
+        f_logit,f_mus,f_sigmas = discriminator(fake,gen_train=False,bottleneck_dim=bottle_dim,batch_size=batch_size)
 
         
         #Obtaining wasserstein loss and gradient penalty losses to train the discriminator
         wasserstein_d=losses.wgan_loss(r_logit,f_logit)
-        gp = losses.gradient_penalty(real, fake, discriminator)
+        gp = losses.gradient_penalty(real, fake, discriminator,batch_size=batch_size)
 
 
         #We obtain the bottleneck loss in the discriminator 
@@ -80,7 +80,7 @@ def main(epoch,batch_size,lr,z_dim,bottle_dim,i_c,alpha,n_critic,gpu_id,data_poo
         #This is the generator loss 
         #As described in the paper we have a simple loss to the generator which uses mean scores from 
         #the generated samples 
-        f_logit_gen,f_mus_gen,f_sigmas_gen = discriminator(fake,gen_train=True,bottleneck_dim=bottle_dim)
+        f_logit_gen,f_mus_gen,f_sigmas_gen = discriminator(fake,gen_train=True,bottleneck_dim=bottle_dim,batch_size=batch_size)
         g_loss = -tf.reduce_mean(f_logit_gen)
 
 
@@ -183,7 +183,7 @@ if __name__ == '__main__':
     n_critic = 1 #How many iteraction we update the critic (In VDB network we update both D and G one time) 
     gpu_id = 0 #When you use multiple GPUs
     epoch = 200  
-    batch_size = 32
+    batch_size = 16
     lr = 0.0001
     z_dim = 100 #Dimentiones of the random noise vactor
 
@@ -197,10 +197,10 @@ if __name__ == '__main__':
 
     #Variational Information Bottleneck and Training Related Paramters
     bottle_dim=512 #dimentiones of the bottleneck layer
-    I_c= 0.5 #This is the information contraint (Eqation(2))
+    I_c= 0.1 #This is the information contraint (Eqation(2))
     Alpha = 1e-6 #This controls the Beta update in dual grdients
     
-    
+
 
   
 

@@ -1,7 +1,7 @@
 
 import tensorflow as tf
 import pdb
-def gradient_penalty(real, fake, Discriminator):
+def gradient_penalty(real, fake, Discriminator,batch_size=32):
 
     #This is the usual gradient panelty fullfil the lipshitz contrain the Wgan loss.
  
@@ -14,7 +14,7 @@ def gradient_penalty(real, fake, Discriminator):
 
     x = Noisy_data
 
-    pred = Discriminator(x)
+    pred = Discriminator(x,batch_size=batch_size)
     gradients = tf.gradients(pred, x)[0]
     slopes = tf.sqrt(tf.reduce_sum(tf.square(gradients), reduction_indices=[1]))#range(1, x.shape.ndims)))
     gp = tf.reduce_mean((slopes - 1.)**2)
