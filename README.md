@@ -3,7 +3,7 @@
 ## Paper - https://arxiv.org/pdf/1810.00821.pdf
 
 ## Dependencies
-- python>=3.5 / python>=2.7
+- python>=2.7
 
 - tensorflow>=1.9
 
