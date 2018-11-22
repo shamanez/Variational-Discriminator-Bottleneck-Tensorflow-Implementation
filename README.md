@@ -23,7 +23,10 @@ python train-WGAN-GP-VDB.py
 - Alpha - This paramters is to update the adaptive lagrange paramters (Documentation can be found inside the code)
 
 ## Training Results 
-- Item  Trained paramters can be found inside  train-WGAN-GP-VDB.py script 
+- Trained paramters can be found inside  train-WGAN-GP-VDB.py script 
+- There are pre-trained checkpoints in the checkpoints folder
+- The images generated during the training progress are insode the sample_images_while_training folder
+- Tensorbored Visualizations can be find inside summeries folder
 
 
 ## Future Work 
