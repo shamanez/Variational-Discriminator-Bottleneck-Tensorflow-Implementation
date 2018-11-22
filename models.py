@@ -29,7 +29,7 @@ def generator(z, dim=64, reuse=True):
 
 
 
-def discriminator_wgan_gp(img, dim=64, reuse=True,gen_train=False,bottleneck_dim=512,batch_size=28):
+def discriminator_wgan_gp(img, dim=64, reuse=True,gen_train=False,bottleneck_dim=512):
 
     '''
     Discriminator modified with Variational Discriminator Bottleneck
@@ -55,7 +55,7 @@ def discriminator_wgan_gp(img, dim=64, reuse=True,gen_train=False,bottleneck_dim
 
         #Please refer the last section of the part 4 in the VDB paper
         if not gen_train:
-            eps=tf.keras.backend.random_normal(shape=(batch_size,512),mean=0,stddev=1)
+            eps=tf.keras.backend.random_normal(shape=(32,512),mean=0,stddev=1)
             bottle_out=mus+ sigmas*eps
         else:
             bottle_out=mus

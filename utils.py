@@ -346,9 +346,7 @@ class DiskImageData:
 
 def to_range(images, min_value=0.0, max_value=1.0, dtype=None):
 
-
-
-    #assert np.min(images) >= -10.0 - 1e-5 and np.max(images) <= 10.0 + 1e-5 , 'The input images should be float64(32) and in the range of [-1.0, 1.0]!'
+    assert np.min(images) >= -1.0 - 1e-5 and np.max(images) <= 1.0 + 1e-5 , 'The input images should be float64(32) and in the range of [-1.0, 1.0]!'
 
   
     if dtype is None:
