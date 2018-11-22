@@ -28,6 +28,13 @@ python train-WGAN-GP-VDB.py
 - The images generated during the training progress are insode the sample_images_while_training folder
 - Tensorbored Visualizations can be find inside summeries folder
 
+<h3> Results: </h3>
+<p align="center">
+<img alt="Loss Plot" src="https://github.com/shamanez/Variational-Discriminator-Bottleneck-Tensorflow-Implementation/blob/master/Results.gif"
+     width=80% height=80% />
+</p>
+<br>
+
 
 ## Future Work 
 - The modified descriminator can be easily use with GAIL.
