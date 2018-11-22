@@ -13,14 +13,14 @@ Have tested with mnsit data set. It will be automatically downloaded to data fol
 python train-WGAN-GP-VDB.py
 
 ## Important Implementations
-- Item Generator and Discriminator Architectures are inside model.py script 
-- Item Normal wgan-gp loss and discriminator bottleneck layer loss are insode the vdb_losses.py script
+-Generator and Discriminator Architectures are inside model.py script 
+-Normal wgan-gp loss and discriminator bottleneck layer loss are insode the vdb_losses.py script
 
 ## Important Paramters
 
--Item I_c - This is the information contrain. This is a hyper paramter
--Item Bottleneck Layer Dimentions 
--Item Alpha - This paramters is to update the adaptive lagrange paramters (Documentation can be found inside the code)
+-I_c - This is the information contrain. This is a hyper paramter
+-Bottleneck Layer Dimentions 
+-Alpha - This paramters is to update the adaptive lagrange paramters (Documentation can be found inside the code)
 
 ## Training Results 
 -Item  Trained paramters can be found inside  train-WGAN-GP-VDB.py script 
