@@ -43,7 +43,7 @@ python train-WGAN-GP-VDB.py
 <h3> Visualizations while Training: </h3>
 <p align="center">
 <img alt="https://github.com/shamanez/Variational-Discriminator-Bottleneck-Tensorflow-Implementation/blob/master/viz.png"
-     width=50% height=50% />
+     width=80% height=80% />
 </p>
 <br>
 
