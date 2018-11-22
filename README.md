@@ -35,6 +35,9 @@ python train-WGAN-GP-VDB.py
 </p>
 <br>
 
+## Tensorbored Visualizations 
+- You can examine the learning progress by visualizing two loss functions of generator and discriminator 
+- Also its impotant to undertand the change in beta parameter(Eq(6) in the paper) with adaptive update method. Here we maximize the beta
 
 ## Future Work 
 - The modified descriminator can be easily use with GAIL.
