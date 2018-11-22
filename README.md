@@ -1,2 +1,3 @@
-# Variational-Discriminator-Bottleneck-Improving-Imitation-Learning-Inverse-RL-and-GANs-by-Constrai
-Variational Discriminator Bottleneck: Improving Imitation Learning, Inverse RL, and GANs by Constraining Information Flow - Tensorlfow Implementation
+## Imprving the discriminator by intorducing the Vatiational Bottleneck Layer to GAN
+
+## Paper - https://arxiv.org/pdf/1810.00821.pdf
