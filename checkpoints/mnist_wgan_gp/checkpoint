@@ -1,0 +1,6 @@
+model_checkpoint_path: "Epoch_(43)_(375of1875).ckpt"
+all_model_checkpoint_paths: "Epoch_(41)_(125of1875).ckpt"
+all_model_checkpoint_paths: "Epoch_(41)_(1125of1875).ckpt"
+all_model_checkpoint_paths: "Epoch_(42)_(250of1875).ckpt"
+all_model_checkpoint_paths: "Epoch_(42)_(1250of1875).ckpt"
+all_model_checkpoint_paths: "Epoch_(43)_(375of1875).ckpt"
