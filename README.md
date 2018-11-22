@@ -40,6 +40,13 @@ python train-WGAN-GP-VDB.py
 - You can examine the learning progress by visualizing two loss functions of generator and discriminator 
 - Also its impotant to undertand the change in beta parameter(Eq(6) in the paper) with adaptive update method. Here we maximize the beta
 
+<h3> Visualizations while Training: </h3>
+<p align="center">
+<img alt="https://github.com/shamanez/Variational-Discriminator-Bottleneck-Tensorflow-Implementation/blob/master/viz.png"
+     width=50% height=50% />
+</p>
+<br>
+
 ## Future Work 
 - The modified descriminator can be easily use with GAIL.
 - Cheking the effect of varios hyper paramters and how generator behaves acording to them
