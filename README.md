@@ -31,7 +31,7 @@ python train-WGAN-GP-VDB.py
 <h3> Results: </h3>
 <p align="center">
 <img alt="Loss Plot" src="https://github.com/shamanez/Variational-Discriminator-Bottleneck-Tensorflow-Implementation/blob/master/Results.gif"
-     width=80% height=80% />
+     width=50% height=50% />
 </p>
 <br>
 
