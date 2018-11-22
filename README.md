@@ -31,7 +31,7 @@ python train-WGAN-GP-VDB.py
 
 <h3> Results: </h3>
 <p align="center">
-<img alt="Loss Plot" src="https://github.com/shamanez/Variational-Discriminator-Bottleneck-Tensorflow-Implementation/blob/master/Results.gif"
+<img alt="" src="https://github.com/shamanez/Variational-Discriminator-Bottleneck-Tensorflow-Implementation/blob/master/Results.gif"
      width=50% height=50% />
 </p>
 <br>
@@ -41,8 +41,9 @@ python train-WGAN-GP-VDB.py
 - Also its impotant to undertand the change in beta parameter(Eq(6) in the paper) with adaptive update method. Here we maximize the beta
 
 <h3> Visualizations while Training: </h3>
-<img alt="Loss Plot" src="https://github.com/shamanez/Variational-Discriminator-Bottleneck-Tensorflow-Implementation/blob/master/viz.png"
-     width=50% height=50% />
+<p align="center">
+<img alt="" src="https://github.com/shamanez/Variational-Discriminator-Bottleneck-Tensorflow-Implementation/blob/master/viz.png"
+     width=80% height=80% />
 </p>
 <br>
 
