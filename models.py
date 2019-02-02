@@ -52,7 +52,7 @@ def discriminator_wgan_gp(img, dim=64, reuse=True,gen_train=False,bottleneck_dim
         #We sample w.r.t to fixed gassian distribution
         #Here We have two options how to sample either taking the mean or sample values when training the generator
         #and the discriminator 
-
+        t=tf.keras.backend.shape(mus)[0]
         #Please refer the last section of the part 4 in the VDB paper
         if not gen_train:
             eps=tf.keras.backend.random_normal(shape=(32,512),mean=0,stddev=1)
